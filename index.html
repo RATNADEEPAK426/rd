@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RD Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: black;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #d16a6a;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      position: relative;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: #d16a6a;
+    }
+
+    .nav-links a.active::after,
+    .nav-links a:hover::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: #d16a6a;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding: 30px 10%;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+
+    .hero-img img {
+      max-width: 350px;
+      border-radius: 50%;
+      box-shadow: 0 0 60px #d16a6a;
+    }
+
+    .hero-content {
+      max-width: 400px;
+    }
+
+    .hero-content h2 {
+      font-size: 3rem;
+    }
+
+    .hero-content h3 {
+      font-size: 2rem;
+      margin-top: 10px;
+    }
+
+    .highlight {
+      color: #d16a6a;
+    }
+
+    .hero-content p {
+      margin: 20px 0;
+      color: #ccc;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .hire-btn {
+      padding: 12px 25px;
+      background-color: transparent;
+      color: #d16a6a;
+      border: 2px solid #d16a6a;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .hire-btn:hover {
+      background-color: red;
+      color: black;
+    }
+
+    /* Section Display Control */
+    section {
+      display: none;
+      padding: 40px 10%;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    section:target {
+      display: block;
+    }
+
+    #home:not(:target):not(:has(:target)) {
+      display: block; /* Show home by default */
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      color: #d16a6a;
+      margin-bottom: 20px;
+    }
+
+    section p, section li {
+      color: #ddd;
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">RATNA DEEPAK</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-img">
+      <img src="https://i.imgur.com/sasuke.jpg" alt="RD" />
+    </div>
+    <div class="hero-content">
+      <h2>Hi, this is</h2>
+      <h3><span class="highlight">RATNA DEEPAK</span></h3>
+      <p>GOOD TO SEE YOU..</p>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" /></a>
+      </div>
+      <a href="#contact"><button class="hire-btn">Hire Me</button></a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>VLSI DFT</li>
+      
+    </ul>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech – ECE</strong><br>PSCMR CET (2024–2027)<br>CGPA: 7.95</p>
+    <p><strong>Diploma- ECE</strong><br>SIDDHARTH INSTITUE OF ENGINEERING AND TECHNOLOGY, PUTTUR (2021–2024)<br>CGPA: 84.08</p>
+    <p><strong>10th Standard</strong><br>ST. THOMAS HIGH SCHOOL, NUZVID  (2020–2021)<br>GPA: 10</p>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>fresher</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> deepaktagaram2006@gmail.com</p>
+    <p><strong>Phone:</strong> +91-6305567500</p>
+    <p><strong>LinkedIn:</strong> <a href="#">https://www.linkedin.com/in/ratna-deepak-tagaram-2288a4367/</a></p>
+    <p><strong>GitHub:</strong> <a href="#">https://github.com/RATNADEEPAK426/rd</a></p>
+  </section>
+
+</body>
+</html>
